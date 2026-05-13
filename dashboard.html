@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Portal | Luxury V2</title>
+    <!-- Tailwind & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            /* Background Pendidikan Balik Lagi */
+            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Luxury - Simetris & Mewah */
+        .luxury-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 3rem;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .luxury-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-15px);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 40px -10px var(--accent-color);
+        }
+
+        /* Icon Glow */
+        .icon-box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2rem;
+            margin: 0 auto 2.5rem;
+            font-size: 2.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s ease;
+        }
+
+        .luxury-card:hover .icon-box {
+            color: white;
+            background: var(--accent-color);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--accent-color);
+        }
+
+        /* Header Shield - Style image_71c9c5.jpg tapi lebih premium */
+        .header-shield {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(25px);
+            padding: 1.5rem 3rem;
+            border-radius: 0 0 3.5rem 3.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: none;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        /* Gradient Modern No-Webkit (No VS Code Warning) */
+        .v2-text {
+            background: linear-gradient(135deg, #0ea5e9, #2dd4bf);
+            background-clip: text;
+            color: transparent;
+        }
+
+        .animate-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <!-- Header Shield (The Iconic Top) -->
+    <div class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4">
+        <header class="header-shield flex flex-col md:flex-row items-center gap-12 md:gap-20 animate-up">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold italic tracking-tighter uppercase">
+                    Dashboard <span class="v2-text">_V2</span>
+                </h1>
+                <div class="flex items-center gap-3 mt-1 justify-center md:justify-start opacity-70">
+                    <span class="h-[1px] w-8 bg-sky-500"></span>
+                    <p class="text-sky-400 font-mono text-[9px] tracking-[0.4em] uppercase">Semester 6 | English Portal</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10 border-l border-white/10 pl-10">
+                <div class="text-right">
+                    <p class="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Academic Year</p>
+                    <p class="text-xl font-bold">2025/2026</p>
+                </div>
+                <div class="h-10 w-[1px] bg-white/10"></div>
+                <div class="text-right">
+                    <p class="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">System Status</p>
+                    <p class="text-xl font-bold text-emerald-400">ONLINE</p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Space for header -->
+    <div class="h-64"></div>
+
+    <!-- Main Grid -->
+    <main class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 pb-24">
+        
+        <!-- Member 1: Dzikri -->
+        <a href="dzikri.html" class="luxury-card p-12 text-center group animate-up" style="--accent-color: #0ea5e9; animation-delay: 0.1s">
+            <div class="icon-box text-sky-400">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <h2 class="text-2xl font-extrabold mb-1 tracking-tight">Dzikri</h2>
+            <p class="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase">1204230102</p>
+        </a>
+
+        <!-- Member 2: Angel -->
+        <a href="angel.html" class="luxury-card p-12 text-center group animate-up" style="--accent-color: #a855f7; animation-delay: 0.2s">
+            <div class="icon-box text-purple-400">
+                <i class="fa-solid fa-user-graduate fa-flip-horizontal"></i>
+            </div>
+            <h2 class="text-2xl font-extrabold mb-1 tracking-tight">Angel</h2>
+            <p class="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase">Student_ID_02</p>
+        </a>
+
+        <!-- Member 3: Kharis -->
+        <a href="kharis.html" class="luxury-card p-12 text-center group animate-up" style="--accent-color: #10b981; animation-delay: 0.3s">
+            <div class="icon-box text-emerald-400">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <h2 class="text-2xl font-extrabold mb-1 tracking-tight">Kharis</h2>
+            <p class="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase">Student_ID_03</p>
+        </a>
+
+        <!-- Member 4: Lius -->
+        <a href="lius.html" class="luxury-card p-12 text-center group animate-up" style="--accent-color: #f59e0b; animation-delay: 0.4s">
+            <div class="icon-box text-amber-400">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <h2 class="text-2xl font-extrabold mb-1 tracking-tight">Lius</h2>
+            <p class="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase">Student_ID_04</p>
+        </a>
+
+    </main>
+
+    <footer class="text-center pb-12 opacity-30">
+        <p class="text-[9px] font-bold tracking-[0.5em] uppercase italic">Secure Integration Platform | Surabaya 2026</p>
+    </footer>
+
+</body>
+</html>
